@@ -10,6 +10,7 @@ function pixelArts() {
   createDivInputsAndButtons();
   defineInputAndButtonSizeSquarePixel();
   clearButton();
+  squarePixel();
   };
 
 function pageTitle() {
@@ -119,6 +120,20 @@ function defineInputAndButtonSizeSquarePixel() {
   divInputsAndButtons.appendChild(inputSize);
   divInputsAndButtons.appendChild(buttonSizeCreate);
 };
+
+function squarePixel() {
+  const colorBorder = document.getElementById('pixel-board');
+  let numberPixels = document.getElementById('input-size').value;
+  if (numberPixels) {
+    numberPixels = checkRange(numberPixels);
+    removePixel();
+    addPixel(numberPixels);
+    const board = numberPixels * 45;
+    const px = 'px';
+    colorBorder.style.width = board + px;
+    colorBorder.style.height = board + px;
+  }
+}
 
 function clearButton() {
   const divInputsAndButtons = document.getElementById('div-inputs-buttons');
