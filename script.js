@@ -8,6 +8,8 @@ function pixelArts() {
   pixelFrame();
   selectColor();
   createDivInputsAndButtons();
+  defineInputAndButtonSizeSquarePixel();
+  clearButton();
   };
 
 function pageTitle() {
@@ -103,4 +105,26 @@ function createDivInputsAndButtons() {
   const divInputsAndButtons = document.createElement('div');
   divInputsAndButtons.id = 'div-inputs-buttons';
   document.body.appendChild(divInputsAndButtons);
+};
+
+function defineInputAndButtonSizeSquarePixel() {
+  const divInputsAndButtons = document.getElementById('div-inputs-buttons');
+  const inputSize = document.createElement('input');
+  const buttonSizeCreate = document.createElement('button');
+  inputSize.id = 'input-size';
+  inputSize.placeholder = 'Digite o tamanho do quadrado de pixels'
+  buttonSizeCreate.id = 'button-size';
+  buttonSizeCreate.innerHTML = 'Criar'
+  buttonSizeCreate.addEventListener('click', squarePixel);
+  divInputsAndButtons.appendChild(inputSize);
+  divInputsAndButtons.appendChild(buttonSizeCreate);
+};
+
+function clearButton() {
+  const divInputsAndButtons = document.getElementById('div-inputs-buttons');
+  const clearButton = document.createElement('button');
+  clearButton.id = 'clear-board';
+  clearButton.innerHTML = 'Limpar';
+  divInputsAndButtons.appendChild(clearButton);
+  clearButton.addEventListener('click', clearPixel);
 };
