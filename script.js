@@ -3,15 +3,17 @@ window.onload = pixelArts;
 function pixelArts() {
   pageTitle();
   createColorPalette();
+  createDivInputsAndButtons();
+  defineInputAndButtonSizeSquarePixel();
+  addPixel();
+  squarePixel();
+  clearButton();
   createColors();
   firstColor ();
   pixelFrame();
   selectColor();
-  createDivInputsAndButtons();
-  defineInputAndButtonSizeSquarePixel();
-  clearButton();
-  squarePixel();
-  };
+  selectFramePixel();
+};
 
 function pageTitle() {
   const titleH1 = document.createElement('h1');
@@ -49,6 +51,8 @@ function pixelFrame() {
   document.body.appendChild(framePrincipal);
 };
 
+
+
 function selectColor() {
   const colorSelected = document.getElementsByClassName('color');
   for (let color = 0; color < colorSelected.length; color += 1) {
@@ -71,6 +75,7 @@ function paintFramePixel(event) {
   const color = document.querySelector('.selected');
   event.target.style.backgroundColor = color.style.backgroundColor;
 };
+
 
 function addPixel (number) {
   const colorBorder = document.getElementById('pixel-board');
@@ -102,25 +107,6 @@ function checkRange(range) {
   return tamanho;
 };
 
-function createDivInputsAndButtons() {
-  const divInputsAndButtons = document.createElement('div');
-  divInputsAndButtons.id = 'div-inputs-buttons';
-  document.body.appendChild(divInputsAndButtons);
-};
-
-function defineInputAndButtonSizeSquarePixel() {
-  const divInputsAndButtons = document.getElementById('div-inputs-buttons');
-  const inputSize = document.createElement('input');
-  const buttonSizeCreate = document.createElement('button');
-  inputSize.id = 'input-size';
-  inputSize.placeholder = 'Digite o tamanho do quadrado de pixels'
-  buttonSizeCreate.id = 'button-size';
-  buttonSizeCreate.innerHTML = 'Criar'
-  buttonSizeCreate.addEventListener('click', squarePixel);
-  divInputsAndButtons.appendChild(inputSize);
-  divInputsAndButtons.appendChild(buttonSizeCreate);
-};
-
 function squarePixel() {
   const colorBorder = document.getElementById('pixel-board');
   let numberPixels = document.getElementById('input-size').value;
@@ -135,6 +121,26 @@ function squarePixel() {
   }
 }
 
+function createDivInputsAndButtons() {
+  const divInputsAndButtons = document.createElement('div');
+  divInputsAndButtons.id = 'div-inputs-buttons';
+  document.body.appendChild(divInputsAndButtons);
+};
+
+
+function defineInputAndButtonSizeSquarePixel() {
+  const divInputsAndButtons = document.getElementById('div-inputs-buttons');
+  const inputSize = document.createElement('input');
+  const buttonSizeCreate = document.createElement('button');
+  inputSize.id = 'input-size';
+  inputSize.placeholder = 'Digite o tamanho do quadrado de pixels'
+  buttonSizeCreate.id = 'button-size';
+  buttonSizeCreate.innerHTML = 'Criar'
+  buttonSizeCreate.addEventListener('click', squarePixel);
+  divInputsAndButtons.appendChild(inputSize);
+  divInputsAndButtons.appendChild(buttonSizeCreate);
+};
+
 function clearButton() {
   const divInputsAndButtons = document.getElementById('div-inputs-buttons');
   const clearButton = document.createElement('button');
@@ -143,3 +149,10 @@ function clearButton() {
   divInputsAndButtons.appendChild(clearButton);
   clearButton.addEventListener('click', clearPixel);
 };
+
+function clearPixel() {
+  let pixels = document.getElementsByClassName('pixel');
+  for (pixels of pixels) {
+    pixels.style.backgroundColor = 'white';
+  }
+}
