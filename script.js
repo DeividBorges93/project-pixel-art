@@ -7,7 +7,7 @@ function pixelArts() {
   firstColor ();
   pixelFrame();
   selectColor();
-};
+  };
 
 function pageTitle() {
   const titleH1 = document.createElement('h1');
@@ -56,4 +56,14 @@ function changeSelectedColor(event) {
   const selectColor = document.querySelector('.selected');
   selectColor.classList.remove('selected');
   event.target.classList.add('selected');
+};
+
+function selectFramePixel() {
+  const pixelBoardSelected = document.getElementById('pixel-board');
+  pixelBoardSelected.addEventListener('click', paintFramePixel);
+};
+
+function paintFramePixel(event) {
+  const color = document.querySelector('.selected');
+  event.target.style.backgroundColor = color.style.backgroundColor;
 };
