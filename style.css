@@ -58,3 +58,11 @@ button:active {
   margin-right: 10px;
 }
 
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+}
+
