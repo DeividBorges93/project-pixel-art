@@ -67,3 +67,21 @@ function paintFramePixel(event) {
   const color = document.querySelector('.selected');
   event.target.style.backgroundColor = color.style.backgroundColor;
 };
+
+function addPixel (number) {
+  const colorBorder = document.getElementById('pixel-board');
+  const numberPixels = number * number;
+  for( let index = 1; index <= numberPixels; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    colorBorder.appendChild(pixel);
+  }
+};
+
+function removePixel() {
+  const pixels = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].remove();
+  }
+};
