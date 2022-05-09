@@ -6,6 +6,7 @@ function pixelArts() {
   createColors();
   firstColor ();
   pixelFrame();
+  selectColor();
 };
 
 function pageTitle() {
@@ -42,4 +43,17 @@ function pixelFrame() {
   const framePrincipal = document.createElement('section');
   framePrincipal.id = 'pixel-board';
   document.body.appendChild(framePrincipal);
+};
+
+function selectColor() {
+  const colorSelected = document.getElementsByClassName('color');
+  for (let color = 0; color < colorSelected.length; color += 1) {
+    colorSelected[color].addEventListener('click', changeSelectedColor);
+  }
+};
+
+function changeSelectedColor(event) {
+  const selectColor = document.querySelector('.selected');
+  selectColor.classList.remove('selected');
+  event.target.classList.add('selected');
 };
