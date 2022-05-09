@@ -7,6 +7,7 @@ function pixelArts() {
   firstColor ();
   pixelFrame();
   selectColor();
+  createDivInputsAndButtons();
   };
 
 function pageTitle() {
@@ -96,4 +97,10 @@ function checkRange(range) {
   };
 
   return tamanho;
+};
+
+function createDivInputsAndButtons() {
+  const divInputsAndButtons = document.createElement('div');
+  divInputsAndButtons.id = 'div-inputs-buttons';
+  document.body.appendChild(divInputsAndButtons);
 };
