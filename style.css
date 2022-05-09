@@ -36,3 +36,16 @@ button:active {
 	top:1px;
 }
 
+#title {
+  text-align: center;
+}
+
+#color-palette {
+  text-align: center;
+}
+
+#div-inputs-buttons {
+  display: flex;
+  justify-content: center;
+}
+
