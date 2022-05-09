@@ -3,6 +3,7 @@ window.onload = pixelArts;
 function pixelArts() {
   pageTitle();
   createColorPalette();
+  createColors();
 };
 
 function pageTitle() {
@@ -16,4 +17,15 @@ function createColorPalette() {
   const colorPalette = document.createElement('section');
   colorPalette.id = 'color-palette';
   document.body.appendChild(colorPalette);
+};
+
+function createColors() {
+  const colors = ['brown', 'orange', 'green', 'red']
+  for(const color of colors) {
+    const divColors = document.createElement('div');
+    const colorPalette = document.getElementById('color-palette');
+    colorPalette.appendChild(divColors);
+    divColors.className = 'color';
+    divColors.style.backgroundColor = color;
+  }
 };
