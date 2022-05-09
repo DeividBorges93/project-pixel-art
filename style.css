@@ -65,4 +65,19 @@ button:active {
   width: 40px;
   margin: 5px;
 }
+#pixel-board {
+  text-align: center;
+  width: 33,333;
+  margin: auto;
+  font-size: 0%;
+  padding: 20px;
+}
 
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+}
