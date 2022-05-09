@@ -85,3 +85,15 @@ function removePixel() {
     pixels[index].remove();
   }
 };
+
+function checkRange(range) {
+  let tamanho = range;
+  if (range < 5) {
+    tamanho = 5;
+  };
+  if (range > 50) {
+    tamanho = 50;
+  };
+
+  return tamanho;
+};
