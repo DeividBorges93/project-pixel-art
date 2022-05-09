@@ -49,3 +49,12 @@ button:active {
   justify-content: center;
 }
 
+#input-size {
+  margin-right: 10px;
+  width: 235px;
+}
+
+#button-size {
+  margin-right: 10px;
+}
+
