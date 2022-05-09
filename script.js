@@ -4,6 +4,7 @@ function pixelArts() {
   pageTitle();
   createColorPalette();
   createColors();
+  firstColor ();
 };
 
 function pageTitle() {
@@ -28,4 +29,10 @@ function createColors() {
     divColors.className = 'color';
     divColors.style.backgroundColor = color;
   }
+};
+
+function firstColor () {
+  const firstColor = document.getElementById('color-palette').firstChild;
+  firstColor.style.backgroundColor = 'black';
+  firstColor.classList.add('selected');
 };
