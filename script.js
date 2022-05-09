@@ -5,6 +5,7 @@ function pixelArts() {
   createColorPalette();
   createColors();
   firstColor ();
+  pixelFrame();
 };
 
 function pageTitle() {
@@ -35,4 +36,10 @@ function firstColor () {
   const firstColor = document.getElementById('color-palette').firstChild;
   firstColor.style.backgroundColor = 'black';
   firstColor.classList.add('selected');
+};
+
+function pixelFrame() {
+  const framePrincipal = document.createElement('section');
+  framePrincipal.id = 'pixel-board';
+  document.body.appendChild(framePrincipal);
 };
