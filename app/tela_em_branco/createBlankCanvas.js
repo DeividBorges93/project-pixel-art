@@ -17,14 +17,31 @@ function removePixel() {
 };
 
 function checkRange(range) {
-  if (range < 5) {
-    const tamanho = 5;
-    return tamanho;
-  };
-  if (range > 30) {
-    const tamanho = 30;
-    return tamanho;
-  } else return range;
+  const minCanvaWidth = 5;
+  const maxCanvaWidth = 30;
+  const minPixelWidth = 1000;
+  const maxCanvaMobileWidth = 15;
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth < minPixelWidth) {
+    if (range < minCanvaWidth) {
+      const width = minCanvaWidth;
+      return width;
+    };
+    if (range > maxCanvaMobileWidth) {
+      const width = maxCanvaMobileWidth;
+      return width;
+    } else return range;
+  } else {
+    if (range < minCanvaWidth) {
+      const width = minCanvaWidth;
+      return width;
+    };
+    if (range > maxCanvaWidth) {
+      const width = maxCanvaWidth;
+      return width;
+    } else return range;
+  } 
 };
 
 function squareInPixel() {
