@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paleta de Cores</title>
+    <title>Crie sua pixel arte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <h1 id="title">Pixel Arte</h1>
+    <div id="input-and-button">
+        <input type="number" id="define-square-size" placeholder="Digite um número de 5 a 30 para dimensionar o quadrado">
+        <button id="define-button">Criar</button>
+    </div>
+    <div id="color-palette">
+        <div id="colors"></div>
+    </div>
+    <div id="canvas-tools">
+        <button id="clear-all-button">Apagar tudo</button>
+        <button id="clear-one-button">Borracha</button>
+    </div>
+    <div id="pixel-board"></div>
 </body>
 </html>
