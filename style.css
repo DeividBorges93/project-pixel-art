@@ -118,6 +118,7 @@ button#clear-one-button:hover{
   text-align: center;
   margin: auto;
   font-size: 0%;
+  margin-bottom: 20px;
 }
 
 .pixel {
