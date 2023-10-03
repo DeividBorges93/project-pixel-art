@@ -1,5 +1,5 @@
 body {
-  background-image: url('./app/assets/back-ground-pixel.png');
+  background-image: url('./app/assets/back-ground-pixel.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -9,10 +9,32 @@ body {
   padding: 0;
 }
 
-#input-and-button {
+#title {
+  padding-top: 50px;
   text-align: center;
-  padding-top: 180px;
+}
+
+#logo-title {
+  width: 250px;
+}
+
+#input-and-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
   padding-bottom: 20px;
+  
+}
+
+#define-input-and-btn {
+  background-color: #82ad87;
+  width: auto;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 input#define-square-size {
@@ -127,7 +149,18 @@ button#define-button:active, button#clear-all-button:active, button#save-button:
   height: 20px;
   width: 20px;
   margin: 5px;
+  transition: transform 0.2s ease;
 }
+
+.color:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color:active {
+  transform: scale(0.8);
+}
+
 #pixel-board {
   text-align: center;
   margin: auto;
