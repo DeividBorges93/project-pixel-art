@@ -4,8 +4,6 @@ function changeSelectedColor(event) {
   const rubber = document.getElementById('rubber');
   const clearPixel = document.getElementById('clear-one-button');
 
-  
-
   if (selectColor) {
     selectColor.classList.remove('selected');
     
