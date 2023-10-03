@@ -12,11 +12,11 @@ function cleanFramePixel(event) {
   const rubber = document.getElementById('rubber');
   const previousColor = document.querySelector('.previous-color');
   const selectColor = document.querySelector('.selected');
-  const rubberBtnStyle = event.target.style;
+  const clearPixel = document.getElementById('clear-one-button');
 
   if (rubber) {
-    rubberBtnStyle.backgroundColor = '#727070';
-    rubberBtnStyle.boxShadow = 'inset 0px 1px 0px 0px #f1f0f0';
+    clearPixel.style.backgroundColor = '#727070';
+    clearPixel.style.boxShadow = 'inset 0px 1px 0px 0px #f1f0f0';
 
     if (previousColor) {
       previousColor.classList.remove('previous-color');
@@ -26,7 +26,7 @@ function cleanFramePixel(event) {
     selectColor.classList.remove('selected');
     rubber.classList.add('selected');
   } else {
-    rubberBtnStyle.backgroundColor = '';
+    clearPixel.style.backgroundColor = '';
     selectColor.classList.remove('selected');
     previousColor.classList.add('selected');
     previousColor.classList.remove('previous-color');

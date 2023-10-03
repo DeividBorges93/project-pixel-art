@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crie sua pixel arte</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo-pixel-art.png" type="image/x-icon">
+    <link rel="shortcut icon" href="fav-icon.ico" type="image/x-icon">
 </head>
 <body>
-    <script type="module" src="script.js"></script>
-    <h1 id="title">Pixel Arte</h1>
     <div id="input-and-button">
         <input type="number" id="define-square-size" placeholder="Digite um número de 5 a 30 para dimensionar o quadrado">
         <button id="define-button">Criar</button>
@@ -19,9 +17,20 @@
         <div id="colors"></div>
     </div>
     <div id="canvas-tools">
-        <button id="clear-all-button">Apagar tudo</button>
-        <button id="clear-one-button">Borracha</button>
+        <div id="tolls">
+            <button id="clear-all-button">
+                <img class="trash-icon" src="./app//assets/icons8-lixo-50.png" alt="icone salvar">
+            </button>
+            <button id="clear-one-button">
+                <img class="rubber-icon" src="./app//assets/icons8-apagar-50.png" alt="icone salvar">
+            </button>
+            <button id="save-button">
+                <img class="save-icon" src="./app//assets/icons8-salvar-50.png" alt="icone salvar">
+            </button>
+        </div>
     </div>
     <div id="pixel-board"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script defer type="module" src="script.js"></script>
 </body>
 </html>
